@@ -7,6 +7,7 @@ Other documentation(s):
 * [cppreference](https://en.cppreference.com/w/cpp/experimental/lib_extensions_3#Scope_guard)
 
 Requires:
+* C++20 constraints (requires-clause) ([reference](https://en.cppreference.com/w/cpp/language/constraints))
 * C++20 `std::is_constant_evaluated` ([reference](https://en.cppreference.com/w/cpp/types/is_constant_evaluated))
 * C++20 constexpr destructors ([reference](https://en.cppreference.com/w/cpp/language/constexpr))
 * Numerous C++17/14/11 features

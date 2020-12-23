@@ -394,7 +394,7 @@ namespace fvs {
     // detail: aggregate-like construction
     template<class RR = R1, class DD = D>
       requires std::is_constructible_v<R1, RR> && std::is_constructible_v<D, DD>
-    unique_resource(detail::unique_resource_aggregate_tag_t, RR&& r = R1(), DD&& d = D(), bool v = false)
+    constexpr unique_resource(detail::unique_resource_aggregate_tag_t, RR&& r = R1(), DD&& d = D(), bool v = false)
       noexcept(std::is_nothrow_constructible_v<R1, RR> && std::is_nothrow_constructible_v<D, DD>) :
       resource(std::forward<RR>(r)), deleter(std::forward<DD>(d)), execute_on_reset(v) {}
   };

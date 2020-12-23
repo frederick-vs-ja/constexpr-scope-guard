@@ -1,7 +1,10 @@
 # Constexpr scope guards
-Constexpr-ized version of scope guards in LFTS v3 (currently referened version: [N4873](https://wg21.link/n4873)).
+Constexpr-ized version of scope guards in LFTS v3.
 
-Other documentation: [cppreference](https://en.cppreference.com/w/cpp/experimental/lib_extensions_3#Scope_guard)
+Currently referened version: [N4873](https://wg21.link/n4873))
+
+Other documentation(s):
+* [cppreference](https://en.cppreference.com/w/cpp/experimental/lib_extensions_3#Scope_guard)
 
 Requires:
 * C++20 `std::is_constant_evaluated` ([reference](https://en.cppreference.com/w/cpp/types/is_constant_evaluated))

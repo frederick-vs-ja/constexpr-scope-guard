@@ -1,7 +1,7 @@
 # Constexpr scope guards
 Constexpr-ized version of scope guards in LFTS v3. Single-header implementation.
 
-Currently referened version: [N4873](https://wg21.link/n4873)
+Currently referenced version: [N4873](https://wg21.link/n4873)
 
 Other documentation(s):
 * [cppreference](https://en.cppreference.com/w/cpp/experimental/lib_extensions_3#Scope_guard)

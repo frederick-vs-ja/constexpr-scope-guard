@@ -6,14 +6,6 @@
 #include <functional>
 #include <exception>
 
-#if __cpp_constexpr_dynamic_alloc < 201907L
-#error This library requires constexpr destructors (since C++20).
-#endif
-
-#if __cpp_lib_is_constant_evaluated < 201811L
-#error This library requires std::is_constant_evaluated (since C++20).
-#endif
-
 namespace fvs {
   namespace detail {
 

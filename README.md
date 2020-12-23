@@ -11,4 +11,8 @@ Requires:
 * C++20 constexpr destructors ([reference](https://en.cppreference.com/w/cpp/language/constexpr))
 * Numerous C++17/14/11 features
 
+Modifications from the LFTS v3 version:
+* utilities are in namespace `::fvs` instead of `::std::experimental`
+* all member and non-member functions are constexpr-ized
+
 Not sufficiently tested for now (2020-12-24)

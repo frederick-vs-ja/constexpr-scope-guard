@@ -70,7 +70,7 @@ namespace fvs {
     }
 
   private:
-    EF exit_function;
+    [[no_unique_address]] EF exit_function;
     bool execute_on_destruction{true};
     // int uncaught_on_creation{detail::cx_uncaught_exceptions()};
   };
@@ -133,7 +133,7 @@ namespace fvs {
     }
 
   private:
-    EF exit_function;
+    [[no_unique_address]] EF exit_function;
     bool execute_on_destruction{true};
     int uncaught_on_creation{detail::cx_uncaught_exceptions()};
   };
@@ -188,7 +188,7 @@ namespace fvs {
     }
 
   private:
-    EF exit_function;
+    [[no_unique_address]] EF exit_function;
     bool execute_on_destruction{true};
     int uncaught_on_creation{detail::cx_uncaught_exceptions()};
   };
@@ -377,8 +377,8 @@ namespace fvs {
     constexpr const D& get_deleter() const noexcept { return deleter; }
 
   private:
-    R1 resource;
-    D deleter;
+    [[no_unique_address]] R1 resource;
+    [[no_unique_address]] D deleter;
     bool execute_on_reset{true};
     
     friend struct fvs::detail::unique_resource_friend;

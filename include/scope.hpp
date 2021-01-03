@@ -72,7 +72,6 @@ namespace fvs {
   private:
     [[no_unique_address]] EF exit_function;
     bool execute_on_destruction{true};
-    // int uncaught_on_creation{detail::cx_uncaught_exceptions()};
   };
 
   template <class EF>

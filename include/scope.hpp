@@ -385,7 +385,8 @@ namespace fvs {
     // detail: aggregate-like construction
     template<class RR = R1, class DD = D>
       requires std::is_constructible_v<R1, RR> && std::is_constructible_v<D, DD>
-    constexpr unique_resource(detail::unique_resource_aggregate_tag_t, RR&& r = R1(), DD&& d = D(), bool v = false)
+    explicit constexpr unique_resource(detail::unique_resource_aggregate_tag_t,
+                                       RR&& r = R1(), DD&& d = D(), bool v = false)
       noexcept(std::is_nothrow_constructible_v<R1, RR> && std::is_nothrow_constructible_v<D, DD>) :
       resource(std::forward<RR>(r)), deleter(std::forward<DD>(d)), execute_on_reset(v) {}
   };
@@ -404,7 +405,7 @@ namespace fvs {
                    std::is_nothrow_constructible_v<std::decay_t<D2>, D2>) {
             using DR = std::decay_t<R2>;
             using DD = std::decay_t<D2>;
-            if (resource == invalid ? true : false) {
+            if (resource == invalid) {
               return unique_resource<DR, DD>(detail::unique_resource_aggregate_tag_t{},
                                              std::forward<R2>(resource), std::forward<D2>(d), false);
             }

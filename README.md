@@ -1,7 +1,7 @@
 # Constexpr scope guards
 Constexpr-ized version of scope guards in LFTS v3. Single-header implementation.
 
-Currently referenced version: [N4873](https://wg21.link/n4873)
+Currently referenced version: [N4908](https://wg21.link/n4908)
 
 Other documentation(s):
 * [cppreference](https://en.cppreference.com/w/cpp/experimental/lib_extensions_3#Scope_guard)
@@ -17,4 +17,4 @@ Modifications from the LFTS v3 version:
 * utilities are in namespace `::fvs` instead of `::std::experimental`
 * all member and non-member functions are constexpr-ized
 
-Not sufficiently tested for now (2020-12-24)
+Test cases are still missing for now. (2022-09-05)
